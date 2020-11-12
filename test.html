@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="UTF-8">
+    <title>Change Cursor Icon</title>
+    <link rel="stylesheet" href="style.css"></title>
+   </head>
+   <body>
+    <div class="cursor"></div>
+
+    <script>
+
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e =>{
+            cursor.setAttribute("style", "top: "+(e.pageY)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+
+        document.addEventListener('click',() => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+
+    </script>
+   </body>
+</html>
+
+    
